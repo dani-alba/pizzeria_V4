@@ -1,0 +1,22 @@
+.dialog-pane {
+    -fx-background-color: #fff8c7;
+    -fx-border-color: lightgreen;
+    -fx-border-width: 5px;
+}
+
+.dialog-pane .label {
+    -fx-text-fill: black;
+}
+
+.dialog-pane:header .header-panel {
+    -fx-background-color: lightgreen;
+}
+
+.dialog-pane:header .header-panel .label {
+    -fx-font-style: italic;
+    -fx-font-size: 2em;
+}
+
+.myDialog > *.button-bar > *.container{
+    -fx-background-color: lightgreen;
+}

@@ -1,0 +1,15 @@
+A continuación se muestra el formato que debe de tener el achivo donde se leerán los precios a cargar.
+
+CARTAPRECIOS
+INGREDIENTES
+nombre:precio
+//
+TIPOPIZZA
+nombre:precio
+//
+TIPOMASA
+nombre:precio
+//
+TAMAÑO
+nombre:precio
+//

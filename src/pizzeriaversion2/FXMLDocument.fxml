@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="anchorPane" minHeight="0.0" minWidth="0.0" onMouseMoved="#cerrarDatosSeleccionAction" prefHeight="541.0" prefWidth="842.0" styleClass="anchorPane" stylesheets="@estilosPizzeria.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pizzeriaversion2.FXMLDocumentController">
+   <children>
+      <Pane fx:id="pn_fondoMenuSeleccion" layoutX="-5.0" layoutY="74.0" prefHeight="49.0" prefWidth="857.0" styleClass="fondoMenuSeleccion" stylesheets="@estilosPizzeria.css" />
+      <Pane fx:id="pn_titulo" layoutX="-5.0" layoutY="-11.0" prefHeight="102.0" prefWidth="857.0" styleClass="titulo" stylesheets="@estilosPizzeria.css">
+         <children>
+            <ImageView fx:id="iv_ImagenEmpresa" fitHeight="79.0" fitWidth="140.0" layoutX="20.0" layoutY="12.0" onMouseReleased="#verWebAction" pickOnBounds="true">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="pn_datosFactura" layoutX="44.0" layoutY="123.0" prefHeight="284.0" prefWidth="753.0">
+         <children>
+            <Pane fx:id="pn_pizarra" layoutX="17.0" layoutY="19.0" prefHeight="169.0" prefWidth="560.0" styleClass="pizarra" stylesheets="@estilosPizzeria.css">
+               <children>
+                  <Label fx:id="lb_masaTitulo" layoutX="72.0" layoutY="14.0" text="Masa:" textFill="WHITE">
+                     <font>
+                        <Font name="AR DECODE" size="36.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lb_masa" layoutX="160.0" layoutY="23.0" prefHeight="40.0" prefWidth="108.0" textFill="WHITE">
+                     <font>
+                        <Font name="AR JULIAN" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lb_tipoPizzaTitulo" layoutX="53.0" layoutY="99.0" text="Tipo pizza:" textFill="WHITE">
+                     <font>
+                        <Font name="AR DECODE" size="36.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lb_tipoPizza" layoutX="183.0" layoutY="109.0" prefHeight="35.0" prefWidth="140.0" textFill="WHITE">
+                     <font>
+                        <Font name="AR JULIAN" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lb_tamaño" layoutX="451.0" layoutY="114.0" prefHeight="17.0" prefWidth="95.0" textFill="WHITE">
+                     <font>
+                        <Font name="AR JULIAN" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lb_tamañoTitulo" layoutX="323.0" layoutY="99.0" text="Tamaño:" textFill="WHITE">
+                     <font>
+                        <Font name="AR DECODE" size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Label fx:id="lb_ingredientesTitulo" layoutX="345.0" layoutY="29.0" text="Ingredientes Extra:" textFill="WHITE">
+               <font>
+                  <Font name="AR DECODE" size="36.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="ta_ingredientes" editable="false" layoutX="620.0" layoutY="29.0" prefHeight="158.0" prefWidth="114.0">
+               <font>
+                  <Font name="AR JULIAN" size="18.0" />
+               </font>
+            </TextArea>
+            <ImageView fx:id="iv_toldo" fitHeight="191.0" fitWidth="161.0" layoutX="612.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="lb_totalPagar" layoutX="16.0" layoutY="221.0" prefHeight="35.0" prefWidth="83.0" text="Total: ">
+               <font>
+                  <Font name="AR DECODE" size="36.0" />
+               </font>
+            </Label>
+            <Separator layoutX="17.0" layoutY="207.0" prefHeight="11.0" prefWidth="727.0" />
+            <TextField fx:id="tf_totalPagar" alignment="CENTER_RIGHT" editable="false" layoutX="109.0" layoutY="233.0" prefHeight="27.0" prefWidth="140.0" styleClass="textoTotal" stylesheets="@estilosPizzeria.css" />
+            <Button fx:id="bt_mostrarDetalle" layoutX="254.0" layoutY="233.0" mnemonicParsing="false" onAction="#verDetallePedidoAction" prefHeight="27.0" prefWidth="51.0" styleClass="boton" stylesheets="@estilosPizzeria.css" text="Ticket" textFill="#d3910e" />
+            <Button layoutX="15.0" layoutY="274.0" mnemonicParsing="false" onAction="#limpiarRegistrosAction" styleClass="boton" text="Limpiar todo" textFill="#d3910e" />
+         </children>
+      </Pane>
+      <Label fx:id="lb_ingredientes" layoutX="379.0" layoutY="157.0" prefHeight="17.0" prefWidth="83.0" />
+      <TitledPane fx:id="acrd_ingreExtra" expanded="false" layoutX="420.0" layoutY="89.0" onMouseMoved="#mostarDatosSeleccionAction" onMousePressed="#cerrarDatosSeleccionAction" styleClass="botonesMenu" stylesheets="@estilosPizzeria.css" text="   Ingredientes Extra" textFill="#d3910e">
+         <content>
+            <AnchorPane fx:id="ap_ingredientesExtra" minHeight="0.0" minWidth="0.0" onMouseMoved="#seleccionMultipleAction" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <CheckBox fx:id="cb_jamon" layoutX="14.0" layoutY="13.0" mnemonicParsing="false" onAction="#elegirIngredienteAction" onMouseMoved="#seleccionMultipleAction" text="Jamon" />
+                  <CheckBox fx:id="cb_queso" layoutX="14.0" layoutY="43.0" mnemonicParsing="false" onAction="#elegirIngredienteAction" onMouseMoved="#seleccionMultipleAction" text="Queso" />
+                  <CheckBox fx:id="cb_tomate" layoutX="14.0" layoutY="72.0" mnemonicParsing="false" onAction="#elegirIngredienteAction" onMouseMoved="#seleccionMultipleAction" text="Tomate" />
+                  <CheckBox fx:id="cb_cebolla" layoutX="14.0" layoutY="99.0" mnemonicParsing="false" onAction="#elegirIngredienteAction" onMouseMoved="#seleccionMultipleAction" text="Cebolla" />
+                  <CheckBox fx:id="cb_olivas" layoutX="14.0" layoutY="128.0" mnemonicParsing="false" onAction="#elegirIngredienteAction" onMouseMoved="#seleccionMultipleAction" text="Olivas" />
+                  <ImageView fx:id="iv_interrogante" fitHeight="27.0" fitWidth="31.0" layoutX="155.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </AnchorPane>
+         </content>
+         <font>
+            <Font name="AR JULIAN" size="13.0" />
+         </font>
+      </TitledPane>
+      <ImageView fx:id="iv_cocinero" fitHeight="177.0" fitWidth="231.0" layoutX="3.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true" />
+      <TitledPane fx:id="acrd_tamaño" expanded="false" layoutX="622.0" layoutY="89.0" onMouseMoved="#mostarDatosSeleccionAction" onMousePressed="#cerrarDatosSeleccionAction" styleClass="botonesMenu" stylesheets="@estilosPizzeria.css" text="         Tamaño" textFill="#d3910e">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Slider fx:id="sb_tamaño" blockIncrement="3.0" layoutX="5.0" layoutY="35.0" majorTickUnit="3.0" max="6.0" minorTickCount="0" onMouseDragged="#tamañoPizzaAction" onMouseReleased="#tamañoPizzaAction" orientation="VERTICAL" prefHeight="111.0" prefWidth="24.0" showTickMarks="true" snapToTicks="true" value="3.0" />
+                  <ImageView fx:id="iv_tamañoPizza" fitHeight="153.0" fitWidth="151.0" layoutX="38.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label fx:id="lb_tmFamTitulo" layoutX="29.0" layoutY="35.0" text="F" />
+                  <Label fx:id="lb_tmMedTitulo" layoutX="27.0" layoutY="81.0" text="M" />
+                  <Label fx:id="lb_tmPeqTitulo" layoutX="29.0" layoutY="129.0" text="P" />
+               </children>
+            </AnchorPane>
+         </content>
+         <font>
+            <Font name="AR JULIAN" size="13.0" />
+         </font>
+      </TitledPane>
+      <TitledPane fx:id="acrd_tipoPizza" expanded="false" layoutX="218.0" layoutY="89.0" onMouseMoved="#mostarDatosSeleccionAction" onMousePressed="#cerrarDatosSeleccionAction" styleClass="botonesMenu" stylesheets="@estilosPizzeria.css" text="       Tipo Pizza" textFill="#d3910e">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <ImageView fx:id="iv_imagenPizza" fitHeight="111.0" fitWidth="195.0" layoutX="3.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true" />
+                  <ComboBox fx:id="cb_tipoPizza" layoutX="25.0" layoutY="24.0" onAction="#elegirTipoPizzaAction" prefHeight="27.0" prefWidth="150.0" />
+               </children>
+            </AnchorPane>
+         </content>
+         <font>
+            <Font name="AR JULIAN" size="13.0" />
+         </font>
+      </TitledPane>
+      <TitledPane fx:id="acrd_masa" expanded="false" layoutX="16.0" layoutY="89.0" onMouseMoved="#mostarDatosSeleccionAction" onMousePressed="#cerrarDatosSeleccionAction" styleClass="botonesMenu" stylesheets="@estilosPizzeria.css" text="          Masa" textAlignment="JUSTIFY" textFill="#d3910e">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="93.0" prefWidth="200.0">
+               <children>
+                  <RadioButton fx:id="cb_normal" layoutX="20.0" layoutY="38.0" mnemonicParsing="false" onAction="#elegirMasaAction" text="Normal">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="masa" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="cb_integral" layoutX="119.0" layoutY="38.0" mnemonicParsing="false" onAction="#elegirMasaAction" text="Integral" toggleGroup="$masa" />
+               </children>
+            </AnchorPane>
+         </content>
+         <font>
+            <Font name="AR JULIAN" size="13.0" />
+         </font>
+      </TitledPane>
+      <ImageView fx:id="iv_cargaPizza" fitHeight="169.0" fitWidth="210.0" layoutX="642.0" layoutY="345.0" onMouseReleased="#pizzaCargaAction" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,122 @@
+
+.fondo{
+    -fx-background-color: #98f298;
+}
+
+.textoTotal{
+    -fx-background-color: #232323;
+    -fx-text-fill: white;
+
+}
+
+.botonesMenu{
+    -fx-background-color: linear-gradient(white, lightgreen);
+    -fx-border-color: lightgreen;
+    -fx-border-radius: 2px;
+    -fx-border-color: lightgreen;
+
+}
+
+.titulo{
+    -fx-background-color: lightgreen;
+}
+
+.fondoMenuSeleccion{
+    -fx-background-color: lightgreen;
+}
+
+.anchorPane{
+    -fx-border-width: 8px;
+    -fx-border-color: lightgreen;
+    -fx-background-color:#fce291;
+}
+
+.pizarra{
+    -fx-background-color: #232323;
+    -fx-background-radius: 10px;
+}
+
+.text-area{
+    -fx-text-fill: white;
+}
+
+.text-area .content{
+    -fx-background-color: #232323;
+}
+
+.boton{
+    -fx-background-color: lightgreen;
+    -fx-text-fill: black;
+}
+
+.boton:hover{
+    -fx-background-color: #f9cc40;
+    -fx-text-fill: black;
+}
+
+.boton:pressed{
+    -fx-background-color: #f9cc40;
+    -fx-border-color: lightgreen;
+    -fx-border-radius: 3px;
+    -fx-border-width: 2px;
+}
+
+
+.dialog-pane {
+    -fx-background-color: #fff8c7;
+    -fx-border-color: lightgreen;
+    -fx-border-width: 5px;
+}
+
+.dialog-pane .label {
+    -fx-text-fill: black;
+}
+
+.dialog-pane:header .header-panel {
+    -fx-background-color: lightgreen;
+}
+
+.dialog-pane:header .header-panel .label {
+    -fx-font-style: italic;
+    -fx-font-size: 2em;
+}
+
+.myDialog > *.button-bar > *.container{
+    -fx-background-color: lightgreen;
+}
+
+
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-opacity: 0;
+}
+
+.tab-pane{
+    -fx-tab-min-width:90px;
+}
+
+.tab{
+    -fx-background-insets: 0 1 0 1,0,0;
+}
+.tab-pane .tab{
+    -fx-background-color: lightgreen;
+
+}
+
+.tab-pane .tab:selected{
+    -fx-background-color: lightgreen;
+    -fx-border-width:1px;
+    -fx-border-color:#c0f9b3;
+    -fx-border-radius:4px;
+}
+
+.tab .tab-label { 
+    -fx-alignment: CENTER;
+    -fx-text-fill: #d3910e;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.tab:selected .tab-label { 
+    -fx-alignment: CENTER;
+    -fx-text-fill: #d3910e;
+}

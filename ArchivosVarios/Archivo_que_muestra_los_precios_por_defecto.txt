@@ -1,0 +1,8 @@
+Ingredientes		Tipo de Pizza		Tipo de Masa		  Tamaño
+---------------------------------------------------------------------------------------
+Jamon 0.80 €		Ninguna 0.0 €		Normal 7.00 €		Pequeña 1.0 €
+Queso 0.40 €		Basica 3.50 €		Integral 6.50 €		Mediana 1.25 €
+Tomate  2.50 €		4 Quesos 8.00 €						Familiar 1.50 €
+Cebolla  1.50 €		Barbacoa 12.00 €
+Olivas  1.16 €		Mexicana 15.50 €
+

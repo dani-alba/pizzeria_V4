@@ -1,0 +1,24 @@
+CARTAPRECIOS
+INGREDIENTES
+Jamon:0.80
+Queso:0.40
+Tomate:2.50
+Cebolla:1.50
+Olivas:1.16
+//
+TIPOPIZZA
+Ninguna:0.0
+Basica:3.50
+4 Quesos:8.00
+Barbacoa:12.00
+Mexicana:15.50
+//
+TIPOMASA
+Normal:7.00
+Integral:6.50
+//
+TAMAÑO
+Pequeña:1.0
+Mediana:1.25
+Familiar:1.50
+//
